@@ -1,0 +1,45 @@
+<div class="view-padding" ng-controller="ProductDetailsCtrl as pdc">
+  <div class="panel panel-primary">
+    <div class="panel-heading">{{pdc.product.name}}</div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Price</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+       <tr>
+         <td>{{pdc.product.price}}</td>
+         <td>{{pdc.product.description}}</td>
+       </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Transactions</h3>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Client name</th>
+            <th>Account</th>
+            <th>Date</th>
+            <th>Transaction No</th>
+            <th>VIP</th>
+          </tr>
+        </thead>
+        <tr ng-repeat="client in pdc.clients">
+          <td>{{client.name}}</td>
+          <td>{{client.account}}</td>
+          <td>{{client.date}}</td>
+          <td>{{client.transaction}}</td>
+          <td>{{client.vip}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

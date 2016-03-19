@@ -1,0 +1,14 @@
+<div class="view-padding" ng-controller="ProductCtrl as pc">
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tr ng-repeat="product in pc.products">
+      <td><a ng-href="/#/product/{{product.slug}}">{{product.name}}</a></td>
+      <td>{{product.category}}</td>
+    </tr>
+  </table>
+</div>

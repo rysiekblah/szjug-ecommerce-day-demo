@@ -1,5 +1,7 @@
 package com.cloudsimple.demo_android;
 
+import android.util.Log;
+
 import com.google.common.collect.Lists;
 
 import java.io.IOException;
@@ -25,14 +27,15 @@ public class DemoPlayService {
     }
 
     public List<Product> getProducts() {
-        List<Product> products = Lists.newArrayList();
-        products.add(new Product(1, "Fork", "Table"));
-        products.add(new Product(2, "Spoon", "Table"));
-//        try {
-//            products = demoPlay.productsList().execute().body();
-//        } catch (IOException e) {
-//            products = Lists.newArrayList();
-//        }
+        List<Product> products;
+//        products.add(new Product(1, "Fork", "Table", price, description));
+//        products.add(new Product(2, "Spoon", "Table", price, description));
+        try {
+            products = demoPlay.productsList().execute().body();
+        } catch (IOException e) {
+            Log.e("DEMO", "ERR " + e);
+            products = Lists.newArrayList();
+        }
         return products;
     }
 
@@ -40,7 +43,7 @@ public class DemoPlayService {
         try {
             return demoPlay.productDetails(id).execute().body();
         } catch (IOException e) {
-            return new Product(-1, "", "");
+            return new Product(-1, "", "", "", "");
         }
     }
 
