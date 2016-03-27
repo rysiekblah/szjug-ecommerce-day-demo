@@ -20,7 +20,5 @@ class HomeController @Inject()(val messagesApi: MessagesApi) extends Controller 
   def index = Action {
     Ok(views.html.index2())
   }
-
-  def indexD(slug:String) = index()
-
+  def index2(slug:String) = index()
 }

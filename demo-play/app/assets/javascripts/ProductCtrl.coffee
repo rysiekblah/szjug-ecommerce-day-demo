@@ -6,10 +6,9 @@ class ProductCtrl
         this.productsList()
 
     productsList: () ->
-      # @$log.debug "Calling service"
       @ProductService.products().then(
         (data) =>
-          # @$log.debug "List: " + JSON.stringify(data.data)
+          @$log.debug "List: " + JSON.stringify(data.data)
           @products = data.data
       )
 

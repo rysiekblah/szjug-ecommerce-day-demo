@@ -36,8 +36,8 @@ object DB {
     product2.slug -> (product2, List(c1, c2, c3)),
     product3.slug -> (product3, List(c1, c2)),
     product4.slug -> (product4, List(c1, c2, c3)),
-    product5.slug -> (product5, List(c1, c2, c4, c3)),
-    product6.slug -> (product6, List(c1, c2, c3, c4))
+    product5.slug -> (product5, List(c1, c2, c4, c3))
+    //product6.slug -> (product6, List(c1, c2, c3, c4
   )
 
 }

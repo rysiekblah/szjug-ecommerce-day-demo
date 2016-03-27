@@ -9,7 +9,7 @@ GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
 GET     /message                    controllers.AsyncController.message
 
-GET     /product/:slug              controllers.HomeController.indexD(slug:String)
+GET     /product/:slug               controllers.HomeController.index2(slug:String)
 GET     /products                   controllers.ProductController.allProducts
 GET     /details/:slug              controllers.ProductController.product(slug:String)
 GET     /clients/:slug              controllers.ProductController.clients(slug:String)
